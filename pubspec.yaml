@@ -1,0 +1,51 @@
+name: etiketdedektifi
+description: "Scan a barcode, decode the label."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+dependencies:
+  flutter:
+    sdk: flutter
+
+  shared_preferences: ^2.5.6
+  intl: ^0.20.3
+  http: ^1.6.0
+  mobile_scanner: ^7.4.3
+  google_mobile_ads: ^9.2.0
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/additives.json
+    - assets/branding/app_icon.png
+    - assets/branding/splash_logo.png
+
+flutter_launcher_icons:
+  android: launcher_icon
+  ios: true
+  image_path: assets/branding/app_icon.png
+  remove_alpha_ios: true
+  min_sdk_android: 23
+  adaptive_icon_background: assets/branding/app_icon_background.png
+  adaptive_icon_foreground: assets/branding/app_icon_foreground.png
+  adaptive_icon_foreground_inset: 0
+
+flutter_native_splash:
+  color: "#10131C"
+  image: assets/branding/splash_logo.png
+  android_12:
+    image: assets/branding/splash_android12.png
+    color: "#10131C"
+  web: false
